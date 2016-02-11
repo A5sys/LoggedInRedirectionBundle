@@ -4,7 +4,7 @@ services:
         tags:
             - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
         arguments:
-            - @router
-            - @security.authorization_checker
+            - "@router"
+            - "@security.authorization_checker"
             - "%logged_in_redirection.route.route_name%"
             - "%logged_in_redirection.route.redirect_route_name%"
